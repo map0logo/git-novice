@@ -1,88 +1,28 @@
 ---
-layout: page
-title: Version Control with Git
-subtitle: Reference
+layout: reference
 ---
-## [Setting Up Git](02-setup.html)
 
-*   Use `git config` to configure
-    a user name, email address, editor, and other preferences once per machine.
+## Git Cheatsheets for Quick Reference
 
-## [Creating a Repository](03-create.html)
-
-*   `git init` initializes a repository.
-
-## [Tracking Changes](04-changes.html)
-
-*   `git status` shows the status of a repository.
-*   Files can be stored in a project's working directory (which users see),
-    the staging area (where the next commit is being built up)
-    and the local repository (where revisions are permanently recorded).
-*   `git add` puts files in the staging area.
-*   `git commit` saves the revisions in the staging area to the local repository.
-*   Always write a log message when committing changes.
-
-## [Exploring History](05-history.html)
-
-*   `git diff` displays differences between revisions.
-*   `git checkout` recovers old versions of files.
-
-## [Ignoring Things](06-ignore.html)
-
-*   The `.gitignore` file tells Git what files to ignore.
-
-## [Remotes in GitHub](07-github.html)
-
-*   A local Git repository can be connected to one or more remote repositories.
-*   Use the HTTPS protocol to connect to remote repositories until you have learned how to set up SSH.
-*   `git push` copies changes from a local repository to a remote repository.
-*   `git pull` copies changes from a remote repository to a local repository.
-
-## [Collaborating](08-collab.html)
-
-*   `git clone` copies a remote repository to create a local repository
-    with a remote called `origin` automatically set up.
-
-## [Conflicts](09-conflict.html)
-
-*   Conflicts occur when two or more people change the same file(s) at the same time.
-*   The version control system does not allow people to blindly overwrite each other's changes.
-    Instead, it highlights conflicts so that they can be resolved.
-
-## [Open Science](10-open.html)
-
-*   Open scientific work is more useful and more highly cited than closed.
-
-## [Licensing](11-licensing.html)
-
-*   People who incorporate GPL'd software into their own software must
-    make their software also open under the GPL license; most other
-    open licenses do not require this.
-*   The Creative Commons family of licenses allow people to mix and
-    match requirements and restrictions on attribution, creation of
-    derivative works, further sharing, and commercialization.
-*   People who are not lawyers should not try to write licenses from
-    scratch.
-
-## [Hosting](12-hosting.html)
-
-*   Projects can be hosted on university servers,
-    on personal domains,
-    or on public forges.
-*   Rules regarding intellectual property and storage of sensitive information apply
-    no matter where code and data are hosted.
+*   Printable Git cheatsheets in several languages are [available here](https://github.github.com/training-kit/) ([English version](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)). More material is available from the [GitHub training website](http://try.github.io/).
+*   An [interactive one-page visualisation](http://ndpsoftware.com/git-cheatsheet.html)
+    about the relationships between workspace, staging area, local repository, upstream repository, and the commands associated with each (with explanations).
+*   Both resources are also available in other languages (e.g. Spanish, French, and more).
+* "[Happy Git and GitHub for the useR](http://happygitwithr.com)" is an accessible, free online book by Jenny Bryan on how to setup and use Git and GitHub with specific references on the integration of Git with RStudio and working with Git in R.
+* [Open Scientific Code using Git and GitHub](https://open-source-for-researchers.github.io/open-source-workshop/) - A collection of explanations and short practical exercises to help researchers learn more about version control and open source software.
 
 ## Glossary
 
-change set
+{:auto_ids}
+changeset
 :   A group of changes to one or more files that are or will be added
     to a single [commit](#commit) in a [version control](#version-control)
     [repository](#repository).
 
 commit
-:   To record the current state of a set of files (a [change set](#changeset))
-    in a [version control](#version-control) [repository](#repository). As a noun, 
-    the result of commiting, i.e. a recorded change set in a repository.
+:   To record the current state of a set of files (a [changeset](#changeset))
+    in a [version control](#version-control) [repository](#repository). As a noun,
+    the result of committing, i.e. a recorded changeset in a repository.
     If a commit contains changes to multiple files,
     all of the changes are recorded together.
 
@@ -95,13 +35,6 @@ conflict
 HTTP
 :   The Hypertext Transfer [Protocol](#protocol) used for sharing web pages and other data
     on the World Wide Web.
-
-infective license
-:   A license, such as the [GPL](http://opensource.org/licenses/GPL-3.0),
-    that legally requires people who incorporate material under the
-    infective license
-    into their own work to also release under the same infective license
-    (eg. under the GPL license).
 
 merge
 :   (a repository): To reconcile two sets of changes to a
@@ -125,11 +58,10 @@ resolve
     being managed by a [version control](#version-control) system.
 
 revision
-:   A recorded [change set](#change-set) of a [version control](#version-control) 
-    [repository](#repository). The same as a [commit](#commit).
+:   A synonym for [commit](#commit).
 
 SHA-1
-:   [SHA-1 hashes](http://en.wikipedia.org/wiki/SHA-1) is what Git uses to compute identifiers, including for commits.
+:   [SHA-1 hashes](https://en.wikipedia.org/wiki/SHA-1) is what Git uses to compute identifiers, including for commits.
     To compute these, Git uses not only the actual change of a commit, but also its metadata (such as date, author,
     message), including the identifiers of all commits of preceding changes. This makes Git commit IDs virtually unique.
     I.e., the likelihood that two commits made independently, even of the same change, receive the same ID is exceedingly
